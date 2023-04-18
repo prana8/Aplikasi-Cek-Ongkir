@@ -24,7 +24,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get("/dashboard", [DashboardController::class, 'index'])->name('dashboard');
-Route::get("/api/provinsi/{id}/kotas", [DashboardController::class, "getkota"]);
+Route::get("/api/Provinsi/{id}/Kota", [DashboardController::class, "getkota"]);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
