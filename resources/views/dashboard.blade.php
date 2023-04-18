@@ -74,12 +74,12 @@
                     </div>
                     <div class="col">
                         <h5 class="text-muted">Pilih Expedisi:</h5>
-                        {{-- @foreach ($kurirs as $key => $value) --}}
+                        @foreach ($kurir as $key => $value)
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="courier" name="courier[]" value="">
-                            <label class="form-check-label" for="courier"></label>
+                            <input class="form-check-input" type="checkbox" id="courier" name="courier[]" value="{{$key}}">
+                            <label class="form-check-label" for="courier">{{ $value }}</label>
                         </div>
-                        {{-- @endforeach --}}
+                        @endforeach
                     </div>
                 </div>
                 <div class="form-row">
